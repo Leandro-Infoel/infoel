@@ -1,5 +1,5 @@
-var saida=document.getElementById('saida');
+var saida = document.getElementById('saida');
 
 function saidaInput() {
-    saida.innerHTML = 'Largura: ' + window.innerWidth + '<br>Altura: ' + window.innerHeight;
+    saida.innerHTML = window.innerWidth + ' x ' + window.innerHeight;
 }
