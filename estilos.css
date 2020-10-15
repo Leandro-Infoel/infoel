@@ -1,0 +1,14 @@
+.opcoes {
+    display: block;
+    width: max-content;
+    color: #ececec;
+    background-color: rgb(85, 85, 85);
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+@media only screen and (max-width: 460px) {
+    .opcoes {
+        width: 80vw;
+    }
+}
