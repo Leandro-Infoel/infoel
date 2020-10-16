@@ -6,7 +6,7 @@ function resizeBody() {
 
 function entrada(input) {
     if (input.value != '') {
-    	saida.innerHTML = 'MD5: ' + MD5(input.value);
+        saida.innerHTML = 'MD5: ' + MD5(input.value) + '<br>Base64: ' + btoa(input.value);
     } else {
     	saida.innerHTML = 'Saída';
     }
