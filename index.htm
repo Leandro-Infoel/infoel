@@ -11,9 +11,14 @@ Fonte Branca - #ececec
         <link rel="stylesheet" href="estilos.css">
         <link rel="icon" type="image/ico" href="favicon.ico">
     </head>
-    <body style="background-color: #1f1f1f; color: #ececec;" onresize="resizeBody()">
-        <input placeholder="Codifique!" oninput="entrada(this)">
-        <div id="saida" style="width: max-content;">Saída</div>
+    <body style="background-color: #1f1f1f; color: #ececec;" onresize="bodyResol()" onload="bodyResol()">
+        <div id="saidaResol" style="width: max-content; margin-bottom: 10px;"></div>
+        <div>
+            <div style="margin-bottom: 10px;">Codificador</div>
+            <input id="entradaInp" type="password" placeholder="Palavra-chave" oninput="entrada(this)"><br>
+            <input id="exibePC" type="checkbox" onclick="exibePalChav(this)">Exibir palavra-chave
+            <div id="saida" style="width: max-content;">Saída</div>
+        </div>
     </body>
     <script src="script.js"></script>
 </html>

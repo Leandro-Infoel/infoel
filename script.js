@@ -1,12 +1,25 @@
-var saida = document.getElementById('saida');
+var saidaResol = document.getElementById('saidaResol');
+var saida =      document.getElementById('saida');
+var entradaInp = document.getElementById('entradaInp');
+var exibePC =    document.getElementById('exibePC');
 
-function resizeBody() {
-    saida.innerHTML = window.innerWidth + ' x ' + window.innerHeight;
+function exibePalChav(cb) {
+    if (cb.checked) {
+        entradaInp.type = 'text';
+    } else {
+        entradaInp.type = 'password';
+    }
+}
+
+function bodyResol() {
+    saidaResol.innerHTML = window.innerWidth + ' x ' + window.innerHeight;
 }
 
 function entrada(input) {
     if (input.value != '') {
-        saida.innerHTML = 'MD5: ' + MD5(input.value) + '<br>Base64: ' + btoa(input.value);
+        saida.innerHTML =  'MD5: ' +     MD5(input.value) + '<br>';
+        saida.innerHTML += 'Base64: ' +  btoa(input.value) + '<br>';
+        saida.innerHTML += 'leoCode: ' + leoCode(input.value);
     } else {
     	saida.innerHTML = 'Saída';
     }
@@ -211,4 +224,21 @@ var MD5 = function (string) {
         var temp = WordToHex(a)+WordToHex(b)+WordToHex(c)+WordToHex(d);
  
         return temp.toLowerCase();
- }
+}
+
+function leoCode(string) {
+	var leoCode = '';
+    var control1 = 0;
+    
+	for (i = 0; i < string.length; i++) {
+    	if (i == control1) {
+            leoCode += String.fromCharCode(string.charCodeAt(i)*2);
+            control1 += 2;
+        } else {
+        	if (string.charAt(i) != ' ') {
+            	leoCode += string.charAt(i);
+            }
+        }
+    }
+    return leoCode;
+}
