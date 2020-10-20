@@ -2,6 +2,12 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
 }
+#entradaInp {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
 table, th, td {
     border: 1px solid #ececec;
     border-collapse: collapse;
@@ -25,7 +31,7 @@ table, th, td {
         display: block !important;
     }
     #entradaInp {
-        width: 99%;
+        width: 95%;
     }
     #saidaResol, #titulo1, #checkboxExibePC {
         margin: auto;
