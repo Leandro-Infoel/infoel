@@ -1,7 +1,10 @@
 var saidaResol = document.getElementById('saidaResol');
-var saida =      document.getElementById('saida');
 var entradaInp = document.getElementById('entradaInp');
 var exibePC =    document.getElementById('exibePC');
+var outMD5 =     document.getElementById('outMD5');
+var outBase64 =  document.getElementById('outBase64');
+var outleoCode = document.getElementById('outleoCode');
+
 
 function exibePalChav(cb) {
     if (cb.checked) {
@@ -17,11 +20,13 @@ function bodyResol() {
 
 function entrada(input) {
     if (input.value != '') {
-        saida.innerHTML =  'MD5: ' +     MD5(input.value) + '<br>';
-        saida.innerHTML += 'Base64: ' +  btoa(input.value) + '<br>';
-        saida.innerHTML += 'leoCode: ' + leoCode(input.value);
+        outMD5.innerHTML =     MD5(input.value);
+        outBase64.innerHTML =  btoa(input.value);
+        outleoCode.innerHTML = leoCode(input.value);
     } else {
-    	saida.innerHTML = 'Saída';
+        outMD5.innerHTML =     '-';
+        outBase64.innerHTML =  '-';
+        outleoCode.innerHTML = '-';
     }
 }
 

@@ -2,17 +2,32 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
 }
-.opcoes {
-    display: block;
-    width: max-content;
-    color: #ececec;
-    background-color: rgb(85, 85, 85);
-    padding: 10px 30px;
-    border-radius: 10px;
-    text-decoration: none;
+table, th, td {
+    border: 1px solid #ececec;
+    border-collapse: collapse;
 }
-@media only screen and (max-width: 460px) {
-    .opcoes {
-        width: 80vw;
+#outMD5, #outBase64, #outleoCode {
+    word-wrap: break-word;
+    padding: 10px;
+}
+@media only screen and (max-width: 615px) {
+    th, td {
+        display: block;
+    }
+    table {
+        width: 100% !important;
+        border: none;
+    }
+    #th1Base64, #th1leoCode {
+        display: none;
+    }
+    #th2Base64, #th2leoCode {
+        display: block !important;
+    }
+    #entradaInp {
+        width: 99%;
+    }
+    #saidaResol, #titulo1, #checkboxExibePC {
+        margin: auto;
     }
 }

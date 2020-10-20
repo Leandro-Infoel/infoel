@@ -13,12 +13,27 @@ Fonte Branca - #ececec
     </head>
     <body style="background-color: #1f1f1f; color: #ececec;" onresize="bodyResol()" onload="bodyResol()">
         <div id="saidaResol" style="width: max-content; margin-bottom: 10px;"></div>
-        <div>
-            <div style="margin-bottom: 10px;">Codificador</div>
-            <input id="entradaInp" type="password" placeholder="Palavra-chave" oninput="entrada(this)"><br>
+        <div id="titulo1" style="margin-bottom: 10px; width: max-content;">Codificador</div>
+        <input id="entradaInp" type="password" placeholder="Palavra-chave" oninput="entrada(this)"><br>
+        <div id="checkboxExibePC" style="width: max-content;">
             <input id="exibePC" type="checkbox" onclick="exibePalChav(this)">Exibir palavra-chave
-            <div id="saida" style="width: max-content; margin-top: 10px;">Saída</div>
         </div>
+
+        <table style="table-layout: fixed; width: 600px; margin-top: 10px;">
+            <tr>
+                <th id="th1MD5">MD5</th>
+                <th id="th1Base64">Base64</th>
+                <th id="th1leoCode">leoCode</th>
+            </tr>
+            <tr>
+                <td id="outMD5">-</td>
+                <th id="th2Base64" style="display: none;">Base64</th>
+                <td id="outBase64">-</td>
+                <th id="th2leoCode" style="display: none;">leoCode</th>
+                <td id="outleoCode">-</td>
+            </tr>
+        </table>
+
     </body>
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </html>
